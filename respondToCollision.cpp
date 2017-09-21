@@ -50,14 +50,14 @@ void respondToCollision(vector2d v, vector2d p, ttang& i, ttang& j) {
 	double jj;
 	vector2d vv1, vv2, ap, bp;
 
-	ap = p - i.cm;  /////////////////////////// p is point where two angs(triangles) collide
+	ap = p - i.cm;  /////// p is point where two triangles collide  // v is edge of collision
 	bp = p - j.cm;  //cm is center of mass 
 
 
 	vv2 = i.speed + (ap&i.omega);  //omega is angular speed
 	vv1 = j.speed + (bp&j.omega);  
 
-	v = v.cw90();    /////rotate vector clokwise 90 degrees
+	v = v.cw90();    /////rotate vector clokwise 90 degrees // v is now normal vector 
 	ap = ap.cw90();
 	bp = bp.cw90();
 
